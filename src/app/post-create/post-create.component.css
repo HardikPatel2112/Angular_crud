@@ -1,0 +1,55 @@
+/* Add a background color to the body */
+body {
+    background-color: #f0f2f5;
+  }
+  
+  /* Center the form container */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Style the card to make it more appealing */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Style the card body */
+  .card-body {
+    padding: 0;
+  }
+  
+  /* Style the card title */
+  .card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* Style the form group */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Style the form controls */
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+  }
+  
+  /* Style the button */
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  

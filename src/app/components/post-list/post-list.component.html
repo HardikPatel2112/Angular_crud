@@ -1,1 +1,24 @@
-<p>post-list works!</p>
+<div class="container">
+    <h1>Posts</h1>
+    
+    <div *ngIf="posts.length === 0" class="alert alert-info">
+      No posts available.
+    </div>
+    
+    <ul class="list-group">
+      <li *ngFor="let post of posts" class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5>Title : {{post.title}}</h5>
+          <p>Body : {{post.body}}</p>
+          <p>Time : {{post.time}}</p>
+          <p>likes : {{post.likes}}</p>
+          <p>Shares : {{post.share}}</p>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm m-2" (click)="editPost(post.id)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deletePost(post.id)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

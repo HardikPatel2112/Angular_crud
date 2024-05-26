@@ -1,0 +1,36 @@
+<div class="form-container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{isEditMode ? 'Edit Post' :'New Post'}}</h2>
+        <form (ngSubmit)="submitPost()" #postForm="ngForm">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" [(ngModel)]="post.title" name="title" class="form-control" required>
+          </div>
+          <div class="form-group" *ngIf="isEditMode">
+            <label for="likes">Likes</label>
+            <input id="likes" [(ngModel)]="post.likes" name="likes" class="form-control" type="number" required min="0">
+            <!-- Display validation message for likes -->
+            <div *ngIf="postForm.controls['likes'].invalid && (postForm.controls['likes'].dirty || postForm.controls['likes'].touched)">
+              <small *ngIf="postForm.controls['likes'].errors?.['required']" class="text-danger">likes is required</small>
+              <small *ngIf="postForm.controls['likes'].errors?.['min']" class="text-danger">Likes must be greater than or equal to 0</small>
+            </div>
+            <label for="share">Share</label>
+            <input id="share" [(ngModel)]="post.share" name="share" class="form-control" type="number" required min="0">
+            <!-- Display validation message for share -->
+            <div *ngIf="postForm.controls['share'].invalid && (postForm.controls['share'].dirty || postForm.controls['share'].touched)">
+              <small *ngIf="postForm.controls['share'].errors?.['required']" class="text-danger">Share is required</small>
+              <small *ngIf="postForm.controls['share'].errors?.['min']" class="text-danger">Share must be greater than or equal to 0</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" [(ngModel)]="post.body" name="body" class="form-control" rows="5" required></textarea>
+          </div>
+          <button [disabled]="postForm.invalid"  type="submit" class="btn btn-primary mt-3">{{isEditMode ? 'Update' :'Create'}}</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
