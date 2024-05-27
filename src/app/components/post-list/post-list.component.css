@@ -1,0 +1,40 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .btn-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .btn-link:hover {
+    color: #007bff;
+  }
+  
+  .d-flex {
+    gap: 10px;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  

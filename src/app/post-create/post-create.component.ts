@@ -10,7 +10,7 @@ import {  ActivatedRoute,  Router } from '@angular/router';
 })
 export class PostCreateComponent implements OnInit {
  
-  post: PostModel  = { id: 0, title: '', body: '', userId: 0 };
+  post: PostModel  = { id: 0, title: '', body: '',likes:0,share:0 ,userId: 0 };
   isEditMode=false;
   constructor(private postService : PostService,private router: Router,private route : ActivatedRoute ){
 
